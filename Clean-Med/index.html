@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#103e3b" />
+  <meta name="description"
+    content="Clean Med — clear thinking, visible connections. Explore symptom profiles through transparent rules in a private, thoughtfully designed educational workspace." />
+  <meta property="og:title" content="Clean Med — Explainable Expert System" />
+  <meta property="og:description"
+    content="A clearer view. A smarter starting point. Discover an independent, explainable health-tech project by Clean Med." />
+  <meta property="og:type" content="website" />
+  <title>Clean Med — Explainable Expert System</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/brand.css" />
+  <script src="./js/knowledge.js" defer></script>
+  <script src="./js/engine.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <div class="mobile-scrim" id="mobileScrim" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <a class="brand" href="./index.html" aria-label="Clean Med home">
+      <img src="./assets/favicon.svg" alt="" width="42" height="42" />
+      <span class="brand-wordmark">Clean <span>Med</span><small>THINK CLEAR. CONNECT BETTER.</small></span>
+    </a>
+    <div class="workspace-label">THE CLEAN MED WORKSPACE</div>
+    <nav class="nav-list" aria-label="Workspace">
+      <button class="nav-item active" data-view="assessment" aria-current="page">
+        <span data-icon="activity"></span>Symptom assessment<span class="nav-active-dot"></span>
+      </button>
+      <button class="nav-item" data-view="knowledge">
+        <span data-icon="book"></span>Knowledge library<span class="nav-count">12</span>
+      </button>
+      <button class="nav-item" data-view="method">
+        <span data-icon="layers"></span>How it works
+      </button>
+    </nav>
+    <div class="sidebar-guide">
+      <div class="guide-icon" data-icon="sparkles"></div>
+      <h3>Understanding comes first.</h3>
+      <p>Good insights deserve an explanation. See the evidence behind every connection.</p>
+      <button class="text-link" data-go="method">
+        Explore the engine <span data-icon="arrow-right"></span>
+      </button>
+    </div>
+    <div class="sidebar-bottom">
+      <div class="local-indicator"><span></span>Runs entirely on your device</div>
+      <div class="sidebar-meta">
+        <span>CLEAN MED / SIGNATURE EDITION</span><span>Independent project · v1.1</span>
+      </div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="breadcrumb">
+        <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"
+          aria-controls="sidebar">
+          <span data-icon="menu"></span></button><span class="breadcrumb-home" data-icon="grid"></span><span
+          class="breadcrumb-workspace">Clean Med</span><span class="breadcrumb-slash">/</span><span
+          id="breadcrumbCurrent">Symptom assessment</span>
+        <a class="mobile-brand" href="./index.html" aria-label="Clean Med home"><img src="./assets/favicon.svg" alt=""
+            width="27" height="27" /><span>Clean <b>Med</b></span></a>
+      </div>
+      <div class="topbar-actions">
+        <span class="educational-badge"><span></span>Private workspace</span><button class="icon-button"
+          id="themeToggle" aria-label="Switch to dark theme" title="Switch theme">
+          <span data-icon="moon"></span></button><span class="avatar" title="Clean Med workspace">CM</span>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section id="assessmentView" class="view" aria-labelledby="assessmentHeading">
+        <div class="workspace-intro">
+          <span>YOUR SPACE TO UNDERSTAND</span><span class="workspace-edition">CLEAN MED / EDUCATIONAL EDITION</span>
+        </div>
+        <div class="brand-hero">
+          <div class="hero-copy">
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>HEALTH INSIGHTS. CLEARLY EXPLAINED.
+            </div>
+            <h1 id="assessmentHeading">
+              A clearer view.<br /><span>A smarter starting point.</span>
+            </h1>
+            <p class="page-description">
+              Turn a symptom profile into connections you can understand.<br class="desktop-break" />
+              Every rule visible. Every result explained.
+            </p>
+            <div class="hero-actions">
+              <div class="sample-container">
+                <button class="button button-primary" id="sampleToggle" aria-expanded="false"
+                  aria-controls="sampleMenu">
+                  <span data-icon="flask"></span>Try a sample<span data-icon="chevron-down"></span>
+                </button>
+                <div class="sample-menu" id="sampleMenu" hidden>
+                  <div class="dropdown-label">EXPLORE AN EXAMPLE</div>
+                  <div id="sampleOptions"></div>
+                  <p>Sample cases are fictional.</p>
+                </div>
+              </div>
+              <button class="hero-method-link text-link" data-go="method">
+                Meet the reasoning<span data-icon="arrow-right"></span>
+              </button>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <img src="./assets/connection-map.svg" alt="" width="420" height="290" /><span
+              class="hero-art-caption"><span></span>CONNECTED BY EVIDENCE</span>
+          </div>
+          <div class="hero-footnote">
+            <span><span data-icon="shield"></span>On-device processing</span><span><span
+                data-icon="layers"></span>Transparent by design</span><span><span data-icon="book"></span>Built for
+              exploration</span>
+          </div>
+        </div>
+        <div class="overview-strip">
+          <div class="overview-item">
+            <span class="metric-icon mint" data-icon="book"></span>
+            <div>
+              <strong>12 <span>conditions</span></strong>
+              <p>One open knowledge library</p>
+            </div>
+          </div>
+          <div class="overview-item">
+            <span class="metric-icon blue" data-icon="activity"></span>
+            <div>
+              <strong>30 <span>symptoms</span></strong>
+              <p>Each connection explained</p>
+            </div>
+          </div>
+          <div class="overview-item">
+            <span class="metric-icon green" data-icon="shield"></span>
+            <div>
+              <strong>100% <span>local</span></strong>
+              <p>Your selections stay yours</p>
+            </div>
+          </div>
+        </div>
+        <div class="assessment-grid">
+          <section class="panel symptoms-panel" aria-labelledby="symptomsHeading">
+            <div class="panel-heading">
+              <div class="section-title">
+                <span class="step-number">01</span>
+                <h2 id="symptomsHeading">Your symptom profile</h2>
+              </div>
+              <span class="small-label" id="selectionCount">0 selected</span>
+            </div>
+            <p class="panel-description">Select the symptoms you want to explore.</p>
+            <div class="search-field">
+              <span data-icon="search"></span><input id="symptomSearch" type="search" placeholder="Find a symptom…"
+                aria-label="Search symptoms" autocomplete="off" /><kbd>/</kbd>
+            </div>
+            <div class="filter-list" id="symptomFilters" aria-label="Filter symptoms by category"></div>
+            <div class="list-caption">
+              <span id="symptomListLabel">ALL SYMPTOMS</span><span id="visibleCount">30 available</span>
+            </div>
+            <div class="symptom-grid" id="symptomGrid"></div>
+            <div class="no-matches" id="noSymptoms" hidden>
+              <span data-icon="search"></span>
+              <h3>No symptoms found</h3>
+              <p>Try another word or category.</p>
+              <button class="text-link" id="resetFilters">Clear filters</button>
+            </div>
+            <div class="selection-tray">
+              <div class="selection-tray-heading">
+                <span>Your selection <span id="trayCount">0</span></span><button class="text-link muted-link"
+                  id="clearSelection" disabled>
+                  Clear all
+                </button>
+              </div>
+              <div class="selected-chips" id="selectedChips">
+                <span class="selection-placeholder">Your selected symptoms will appear here.</span>
+              </div>
+            </div>
+            <div class="assessment-action">
+              <button class="button button-primary" id="runAssessment" disabled>
+                <span data-icon="sparkles"></span>Explore matches<span data-icon="arrow-right"></span></button><span
+                id="actionHint">Select at least one symptom to begin</span>
+            </div>
+          </section>
+          <section class="panel results-panel" aria-labelledby="resultsHeading">
+            <div class="panel-heading">
+              <div class="section-title">
+                <span class="step-number">02</span>
+                <h2 id="resultsHeading">The insights</h2>
+              </div>
+              <span class="status-badge" id="resultStatus"><span></span>Ready when you are</span>
+            </div>
+            <div id="emptyResults" class="empty-results">
+              <div class="orbit-illustration" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <span class="orbit-node node-one" data-icon="activity"></span><span class="orbit-node node-two"
+                  data-icon="plus"></span><span class="orbit-node node-three" data-icon="heart"></span>
+                <div class="orbit-center">
+                  <img src="./assets/favicon.svg" alt="" width="54" height="54" />
+                </div>
+                <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span>
+              </div>
+              <span class="empty-eyebrow">THE CLEAN MED APPROACH</span>
+              <h3>Every connection has a story.</h3>
+              <p>
+                Choose symptoms on the left, then explore how they connect to the knowledge base.
+              </p>
+              <div class="empty-steps">
+                <span><b>1</b>Select symptoms</span><span data-icon="arrow-right"></span><span><b>2</b>Explore the
+                  why</span>
+              </div>
+            </div>
+            <div id="resultsContent" hidden>
+              <div class="results-summary" id="resultsSummary"></div>
+              <div id="ruleSummary"></div>
+              <div id="topResult"></div>
+              <div class="ranked-heading">
+                <h3>Other connections</h3>
+                <button class="text-link" id="showAllResults">View all</button>
+              </div>
+              <div id="rankedResults"></div>
+              <div class="match-explainer">
+                <span data-icon="info"></span>
+                <p>
+                  <strong>A match score, not a diagnosis.</strong> Scores measure how many
+                  symptoms in a stored rule were selected. They are not the probability of having
+                  a condition.
+                </p>
+              </div>
+              <button class="button button-white export-button" id="exportReport">
+                <span data-icon="download"></span>Export assessment<span class="file-type">JSON</span>
+              </button>
+            </div>
+            <div class="results-footer">
+              <span data-icon="lock"></span>Private by design. Selections stay in this tab.
+            </div>
+          </section>
+        </div>
+        <section class="verification-panel panel" aria-labelledby="verifyHeading">
+          <div class="verification-intro">
+            <span class="metric-icon mint" data-icon="crosshair"></span>
+            <div>
+              <h2 id="verifyHeading">Have a specific condition in mind?</h2>
+              <p>Start with a hypothesis. Check the symptoms that support it.</p>
+            </div>
+          </div>
+          <div class="verify-actions">
+            <label class="sr-only" for="conditionSelect">Condition to verify</label><select
+              id="conditionSelect"></select><button class="button button-white" id="verifyCondition">
+              Verify rule<span data-icon="arrow-right"></span>
+            </button>
+          </div>
+          <div id="verificationResult" hidden></div>
+        </section>
+        <div class="education-note">
+          <span data-icon="info"></span>
+          <p>
+            <strong>Built for learning, not medical decisions.</strong> This project demonstrates
+            rule-based reasoning using a small, unvalidated knowledge base. It does not provide a
+            medical diagnosis.
+          </p>
+        </div>
+      </section>
+      <section id="knowledgeView" class="view" hidden aria-labelledby="knowledgeHeading">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>THE KNOWLEDGE BEHIND THE RESULTS
+            </div>
+            <h1 id="knowledgeHeading">An open book<span class="accent">.</span></h1>
+            <p class="page-description">12 conditions. Every symptom. Nothing hidden.</p>
+          </div>
+          <span class="version-pill">Knowledge base / v1.0.0</span>
+        </div>
+        <div class="library-toolbar">
+          <div class="search-field">
+            <span data-icon="search"></span><input id="knowledgeSearch" type="search"
+              placeholder="Search conditions or symptoms…" aria-label="Search knowledge library" />
+          </div>
+          <span id="libraryCount">12 conditions</span>
+        </div>
+        <div class="library-grid" id="libraryGrid"></div>
+        <div class="education-note">
+          <span data-icon="info"></span>
+          <p>
+            These hand-authored rules are demonstration data inherited from the original academic
+            project. They are not clinically validated, exhaustive, or sourced as a medical
+            reference.
+          </p>
+        </div>
+      </section>
+      <section id="methodView" class="view" hidden aria-labelledby="methodHeading">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span>NO BLACK BOXES</div>
+            <h1 id="methodHeading">Understand every connection<span class="accent">.</span></h1>
+            <p class="page-description">Simple rules. Visible evidence. Reproducible results.</p>
+          </div>
+          <span class="version-pill">Deterministic engine</span>
+        </div>
+        <div class="method-grid">
+          <article class="panel method-card">
+            <span class="method-number">01 / KNOWLEDGE</span><span class="method-icon" data-icon="book"></span>
+            <h2>Start with what we know.</h2>
+            <p>
+              Each condition is a rule: a named conclusion with a fixed list of required symptoms.
+              The engine compares your selection against these lists.
+            </p>
+            <div class="code-example">
+              IF symptom A AND symptom B<br />THEN condition rule is satisfied
+            </div>
+          </article>
+          <article class="panel method-card">
+            <span class="method-number">02 / FORWARD REASONING</span><span class="method-icon"
+              data-icon="git-branch"></span>
+            <h2>From evidence to a match.</h2>
+            <p>
+              Forward evaluation checks every rule. A complete match requires every symptom in
+              that rule to be selected. Extra selected symptoms do not invalidate it.
+            </p>
+            <div class="code-example">
+              All required symptoms selected?<br /><span class="code-green">→ Complete rule match</span>
+            </div>
+          </article>
+          <article class="panel method-card">
+            <span class="method-number">03 / BACKWARD VERIFICATION</span><span class="method-icon"
+              data-icon="crosshair"></span>
+            <h2>Put a hypothesis to the test.</h2>
+            <p>
+              Choose a condition first, then see which required symptoms are selected and which
+              remain unselected. This is a direct, single-rule verification.
+            </p>
+            <div class="code-example">
+              Target condition → required symptoms<br />→ Selected / not selected
+            </div>
+          </article>
+        </div>
+        <section class="panel formula-panel">
+          <div>
+            <span class="eyebrow">UNDERSTANDING THE SCORE</span>
+            <h2>Coverage, expressed simply.</h2>
+            <p>
+              Every symptom has equal weight. We divide selected symptoms from a condition’s rule
+              by the number of symptoms in that rule.
+            </p>
+          </div>
+          <div class="formula">
+            <span>Selected rule symptoms</span>
+            <div></div>
+            <span>Total rule symptoms</span><b>× 100</b>
+          </div>
+          <div class="formula-example">
+            <strong>3 of 5 symptoms = 60% match</strong><span>Not a 60% chance of having a condition.</span>
+          </div>
+        </section>
+        <section class="panel limitations-panel">
+          <h2>What the engine can — and can’t — tell you</h2>
+          <div class="limitations-grid">
+            <div>
+              <h3>Transparent by intention</h3>
+              <p>
+                Results sort by coverage, then the number of matching symptoms, then condition
+                name. Unselected symptoms are unknown, not confirmed absent. Additional symptoms
+                are shown and do not reduce a score.
+              </p>
+            </div>
+            <div>
+              <h3>A deliberately bounded model</h3>
+              <p>
+                No trained model, Bayesian probability, medical history, symptom severity,
+                prevalence, or multi-step inference is involved. Several conditions can match the
+                same selection. Even a 100% rule match is not a diagnosis.
+              </p>
+            </div>
+            <div>
+              <h3>Privacy in practice</h3>
+              <p>
+                The application makes no API calls and stores no symptom history. Selections live
+                in memory until the page reloads. Only your display theme is saved locally.
+                Exporting creates a file on your device.
+              </p>
+            </div>
+          </div>
+        </section>
+        <button class="button button-primary" data-go="assessment">
+          Try the workspace<span data-icon="arrow-right"></span>
+        </button>
+      </section>
+      <footer class="main-footer">
+        <span class="footer-brand"><img src="./assets/favicon.svg" alt="" width="24" height="24" /><strong>Clean
+            Med</strong><span>Clear thinking. Visible connections.</span></span>
+        <span>© 2026 Clean Med<span class="footer-separator">·</span>Educational
+          project</span>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <div class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript>
+    <div class="noscript">
+      MOHAMED HASSANIN
+    </div>
+  </noscript>
+</body>
+
+</html>
